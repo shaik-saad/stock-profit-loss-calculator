@@ -6,27 +6,39 @@ const output = document.querySelector("#output")
 const errorMessage = document.querySelector("#error-message")
 
 function showMessage(message){
+    errorMessage.innerText =""
+    errorMessage.style.backgroundColor = ""
     output.innerText = message
 }
 
 function showError(message){
+    errorMessage.style.backgroundColor = "rgba(255, 0, 0, 0.4)"
     errorMessage.innerText = message
 }
 
 // processing
 function calculateProfitAndLoss(initial, quantity, current){
+
+    // loss calculation
     if(initial > current){
         var loss = (initial - current) * quantity
         var lossPercentage = (loss / initial) * 100
+        lossPercentage = lossPercentage.toFixed(2)
 
-        showMessage(`Oops! there is a loss of ${loss} and the percentage is ${lossPercentage}%`) //output
-    } else if (current > initial){
+        output.style.backgroundColor = "rgba(255, 0, 0, 0.4)"
+        showMessage(`Oops! there is a loss of ${loss} 😨 and the percentage is ${lossPercentage}%`) //output
+        
+    } else if (current > initial){ //profit calculation
         var profit = (current - initial) * quantity
         var profitPercentage = (profit / initial) * 100
+        profitPercentage = profitPercentage.toFixed(2)
 
-        showMessage(`Dayum! there is a profit of  ${profit} and the percentage is ${profitPercentage}%`) //output
-    } else{
-        showMessage("No pain No gain. No gain No pain.") //output
+        output.style.backgroundColor = "rgba(0, 255, 0, 0.4)"
+        showMessage(`Dayum! there is a profit of  ${profit} 🥳 and the percentage is ${profitPercentage}%`) //output
+
+    } else{ 
+        output.style.backgroundColor = "rgba(255, 255, 0, 0.8)"
+        showMessage("No pain No gain. No gain No pain. 💪") //output
     }
 }
 
