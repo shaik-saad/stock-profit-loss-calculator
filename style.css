@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root{
+    --primary-color: #60A5FA;
+    --primary-dark: #15202B;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--primary-dark);
+    color: #FFFFFF;
+}
+
+header h1{
+    text-align: center;
+}
+
+#container{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+#error-message{
+    max-width: 70%;
+    margin: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+  }
+  
+  #output{
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+  }
+
+label, input{
+    display: block;
+    width: 70%;
+    margin: 0.5rem auto 1rem auto;
+    /* font-size: large; */
+    font-weight: bold;
+}
+
+input{
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    border: 3px solid var(--primary-color);
+}
+
+#calculate-btn{
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    font-size: large;
+    color: #FFFFFF;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+footer p{
+    display: inline;
+}
+
+#non-bullet-list{
+    list-style: none;
+    display: inline;
+    padding-left: 0;
+}
+
+.list-item-inline{
+    display: inline;
+    
+}
+
+.social-link{
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+#copy-right a{
+    color: white;
+}
