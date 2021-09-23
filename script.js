@@ -18,11 +18,11 @@ function showError(message){
 
 // processing
 function calculateProfitAndLoss(initial, quantity, current){
-
+    
     // loss calculation
     if(initial > current){
         var loss = (initial - current) * quantity
-        var lossPercentage = (loss / initial) * 100
+        var lossPercentage = ((initial - current) * 100) / initial 
         lossPercentage = lossPercentage.toFixed(2)
 
         output.style.backgroundColor = "rgba(255, 0, 0, 0.4)"
@@ -30,7 +30,7 @@ function calculateProfitAndLoss(initial, quantity, current){
         
     } else if (current > initial){ //profit calculation
         var profit = (current - initial) * quantity
-        var profitPercentage = (profit / initial) * 100
+        var profitPercentage = ((current - initial) * 100) / initial
         profitPercentage = profitPercentage.toFixed(2)
 
         output.style.backgroundColor = "rgba(0, 255, 0, 0.4)"
