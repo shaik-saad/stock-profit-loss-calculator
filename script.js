@@ -12,6 +12,8 @@ function showMessage(message){
 }
 
 function showError(message){
+    output.innerText =""
+    output.style.backgroundColor = ""
     errorMessage.style.backgroundColor = "rgba(255, 0, 0, 0.4)"
     errorMessage.innerText = message
 }
@@ -62,7 +64,7 @@ function onclickHandler(){
     var quantity = stocksQuantity.value
     var currentpp = currentPrice.value
 
-    
+
     if(errorHandling(initialpp, quantity, currentpp)){
         calculateProfitAndLoss(Number(initialpp), Number(quantity), Number(currentpp))
     }
